@@ -1,0 +1,7 @@
+development:
+  host: localhost
+  database: bw_dev
+
+test:
+  host: localhost
+  database: banned_words_app_test
