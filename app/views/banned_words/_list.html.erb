@@ -1,13 +1,11 @@
 <h2 style="margin-bottom: 30px;">Existing Banned Words</h2>
 
-<table class="table" style="width:540px;">
+<table class="table" style="width:230px;">
   <thead></thead>
   <tbody>
     <% @banned_words.each do |bw| %>
-    <tr>
-      <td><%= bw %></td>
-    </tr>
-      <% end %>
+      <tr><td><%= bw.first %></td></tr>
+    <% end %>
   </tbody>
 </table>
 

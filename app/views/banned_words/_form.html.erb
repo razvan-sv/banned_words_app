@@ -1,5 +1,5 @@
 <h3>Add a new banned word</h3>
-<%= form_tag "/", :class => "well form-inline" do %>
-  <%= text_field_tag :word,"",  :class => "input-medium" %>
-  <%= submit_tag "Submit", :class => [:btn, "btn-success"], :style => "float:right" %>
+<%= form_tag add_bw_path, :class => "form-inline" do %>
+  <%= text_field_tag :word, "",  :class => "input-medium" %>
+  <%= submit_tag "Submit", :class => [:btn, "btn-success"] %>
 <% end %>
