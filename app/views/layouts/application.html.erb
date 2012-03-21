@@ -17,10 +17,7 @@
   <div class="container">
     <div class="row">
     <div class="span7"><%= yield %></div>
-    <div class="span5">
-      <h2>Existing Banned Words</h2>
-      <p></p>
-    </div>
+    <div class="span5"><%= render "banned_words/list" %></div>
   </div>
 </body>
 </html>

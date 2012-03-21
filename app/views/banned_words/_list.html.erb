@@ -1,0 +1,14 @@
+<h2 style="margin-bottom: 30px;">Existing Banned Words</h2>
+
+<table class="table" style="width:540px;">
+  <thead></thead>
+  <tbody>
+    <% @banned_words.each do |bw| %>
+    <tr>
+      <td><%= bw %></td>
+    </tr>
+      <% end %>
+  </tbody>
+</table>
+
+<%= render "banned_words/form" %>
