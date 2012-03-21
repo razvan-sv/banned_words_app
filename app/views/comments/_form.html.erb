@@ -1,9 +1,10 @@
 <h3>Add a new comment</h3>
-<%= form_for Comment.new, :html => { :class => "form-horizontal", :style => "width:540px;" } do |f| %>
+
+<%= form_for @comment, :html => { :class => "form-horizontal", :style => "width:540px;" } do |f| %>
   <div class="control-group">
     <div class="control">
       <%= f.text_area :body, :class => "input-xxlarge", :rows => 4 %>
     </div>
   </div>
-  <%= f.submit "Submit Comment", :class => [:btn, "btn-success"], :style => "float:right" %>
+  <%= f.submit "Submit Comment", :class => "btn btn-success pull-right" %>
 <% end %>

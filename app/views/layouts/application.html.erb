@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BannedWordsApp</title>
+  <title>Banned Words App - Home</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -13,11 +13,12 @@
         <a class="brand" href="/">Masking Banned Words</a>
       </div>
     </div>
+    <span class="label label-info pull-right">banned_words v0.1.0</span>
   </div>
   <div class="container">
     <div class="row">
     <div class="span7"><%= yield %></div>
-    <div class="span5"><%= render "banned_words/list" %></div>
+    <div class="span5"><%= render "banned_words/index" %></div>
   </div>
 </body>
 </html>
