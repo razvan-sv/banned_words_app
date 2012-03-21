@@ -1,0 +1,14 @@
+<h2 style="margin-bottom: 30px;">Comments</h2>
+
+<table class="table" style="width:540px;">
+  <thead></thead>
+  <tbody>
+    <% @comments.each do |comment| %>
+    <tr>
+      <td><%= comment.body %></td>
+    </tr>
+      <% end %>
+  </tbody>
+</table>
+
+<%= render "comments/form" %>
