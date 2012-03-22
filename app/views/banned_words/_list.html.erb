@@ -1,8 +1,8 @@
-<table class="table" style="width:230px;">
-  <thead></thead>
-  <tbody>
-    <% @banned_words.each do |bw| %>
-      <tr><td><%= bw.first %> <i class="icon-trash"></i></td></tr>
-    <% end %>
-  </tbody>
-</table>
+<% @banned_words.each do |bw| %>
+  <p class="well" style="width:230px;padding:7px;">
+    <%= bw.first %>
+    <%= link_to '<i class="icon-trash"></i>'.html_safe, remove_bw_path(bw.first), 
+      :method => :delete,
+      :confirm => "Are you sure?", :class => "pull-right", :style => "display:none;" %>
+  </p>
+<% end %>

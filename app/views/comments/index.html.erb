@@ -1,14 +1,11 @@
-<h2 style="margin-bottom: 30px;">Comments</h2>
-
-<table class="table" style="width:540px;">
-  <thead></thead>
-  <tbody>
-    <% @comments.each do |comment| %>
-    <tr>
-      <td><%= comment.body %> <i class="icon-trash"></td>
-    </tr>
-      <% end %>
-  </tbody>
-</table>
+<% @comments.each do |comment| %>
+  <p class="well comment" style="width:500px;">
+    @<%= comment.created_at.utc %>
+    <%= link_to '<i class="icon-trash"></i>'.html_safe, comment_path(comment), 
+      :method => :delete, :confirm => "Are you sure?", :style => "display:none;" %>
+    </br>
+    <%= comment.body %>
+  </p>
+<% end %>
 
 <%= render "comments/form" %>
