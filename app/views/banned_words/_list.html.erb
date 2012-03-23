@@ -1,8 +1,11 @@
-<% @banned_words.each do |bw| %>
-  <p class="well" style="width:230px;padding:7px;">
-    <%= bw.first %>
-    <%= link_to '<i class="icon-trash"></i>'.html_safe, remove_bw_path(bw.first), 
-      :method => :delete,
-      :confirm => "Are you sure?", :class => "pull-right", :style => "display:none;" %>
-  </p>
-<% end %>
+<div class="well" style="width:230px;padding:10px;">
+  <ol>
+    <% @banned_words.each do |bw| %>
+      <li class="one-bw">
+        <%= bw.first %>
+        <%= link_to '<i class="icon-trash"></i>'.html_safe, remove_bw_path(bw.first),
+          :method => :delete, :confirm => "Are you sure?", :class => "pull-right", :style => "display:none;" %>
+      </li>
+    <% end %>
+  </ol>
+</div>

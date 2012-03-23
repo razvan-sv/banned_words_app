@@ -1,9 +1,10 @@
-bind_trash_bins = ->
-  $(".comment").mouseover ->
+window.bind_trash_bins = (name)->
+  $(name).mouseover ->
     $("a", this).show()
 
-  $(".comment").mouseout ->
+  $(name).mouseout ->
     $("a", this).hide()
 
 $(document).ready ->
-  bind_trash_bins()
+  bind_trash_bins(".comment")
+  bind_trash_bins(".one-bw")

@@ -1,0 +1,7 @@
+<p class="well comment" style="width:500px;">
+  @<%= comment.created_at.utc %>
+  <%= link_to '<i class="icon-trash"></i>'.html_safe, comment_path(comment), 
+    :method => :delete, :confirm => "Are you sure?", :style => "display:none;" %>
+  </br>
+  <%= comment.body %>
+</p>
