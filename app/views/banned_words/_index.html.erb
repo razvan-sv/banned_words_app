@@ -1,10 +1,8 @@
 <h2 style="margin-bottom: 30px;">
   Existing Banned Words
-  <%= link_to "Clear All", clear_bw_path, :class => "btn btn-danger" %>
+  <%= link_to "Clear All", clear_bw_path, :class => "btn btn-danger", :confirm => "Are you sure?" %>
 </h2>
-
 <div id="bw">
   <%= render "banned_words/list" %>
 </div>
-
 <%= render "banned_words/form" %>
