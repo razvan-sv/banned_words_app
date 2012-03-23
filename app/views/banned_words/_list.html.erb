@@ -2,8 +2,8 @@
   <ol>
     <% @banned_words.each do |bw| %>
       <li class="one-bw">
-        <%= bw.first %>
-        <%= link_to '<i class="icon-trash"></i>'.html_safe, remove_bw_path(bw.first),
+        <%= bw %>
+        <%= link_to '<i class="icon-trash"></i>'.html_safe, remove_bw_path(bw),
           :method => :delete, :confirm => "Are you sure?", :class => "pull-right", :style => "display:none;" %>
       </li>
     <% end %>
